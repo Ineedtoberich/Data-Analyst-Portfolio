@@ -1,21 +1,34 @@
-# 🔬 Cervical Cancer Detection System
+# 🔬 Cervical Cancer Detection System (Computer Vision)
 
-### **Project Goal**
-To automate the classification of Pap smear cells into 7 categories (dysplastic/normal) to assist medical diagnosis.
+### **Project Overview**
+This project automates the classification of Pap smear cells into 7 categories (dysplastic vs normal) to assist medical diagnosis using Deep Learning.
+
+---
+
+### **⚠️ Dataset Information**
+**Note:** Due to the large size of the medical imaging dataset (Herlev Pap Smear Dataset), the raw images are not hosted in this repository.
+* **Data Source:** Search in kaggle for the dataset and the the dataset balacing and augmentation code is already given in the file.
+* **Preprocessing:** The dataset was balanced using data augmentation (rotation, zoom, flips) to ~1,800 images per class.
+
+---
 
 ### **Key Results**
-I trained and benchmarked three different Deep Learning architectures. The **Vision Transformer (ViT)** outperformed standard CNNs.
+I trained and benchmarked three architectures. The **Vision Transformer (ViT)** achieved the highest accuracy.
 
-| Model Architecture | Framework | Accuracy |
+| Model Architecture | Framework | Test Accuracy |
 | :--- | :--- | :--- |
 | **Vision Transformer (ViT)** | PyTorch | **98.68%** 🏆 |
 | **Custom CNN** | TensorFlow | 97.85% |
 | **EfficientNetB0** | TensorFlow | 96.67% |
 
-### **Technical Approach**
-* **Data Processing:** Balanced 7 classes using Data Augmentation (Rotation, Zoom, Flip).
-* **Hybrid Frameworks:** Demonstrated proficiency in both **TensorFlow/Keras** (for CNNs) and **PyTorch** (for Transformers).
-* **Explainability:** Implemented **GradCAM** to visualize model attention.
+### **File in this Repository**
+* `analysis_notebook.ipynb`: The Python code for the CNN, EfficientNet, and ViT models.
+The full training and evaluation pipeline.
+
+### ** Technologies Used**
+* **Deep Learning:** PyTorch, TensorFlow, Keras, Transformers (HuggingFace)
+* **Explainable AI:** GradCAM (for heatmap visualization)
+* **Processing:** OpenCV, NumPy, Pandas
 
 ### ** visualizations**
 GRADCAM1 IMAGE
